@@ -10,14 +10,17 @@
 </head>
 
 <body>
+
     <table border=0>
         <tr>
         <td><select id="categories" name="categories"></select>
         <td><input type="button" id="button" value="Submit">
         </tr>
     </table>
+
     <table id="results" cellspacing="3" cellpadding="3">
     </table>
+
 <script type="text/javascript">
 var category;
 $(document).ready(function(){
@@ -38,6 +41,7 @@ $(document).ready(function(){
         getStories();
     });
 });
+
 var getStories = function(){
     var storyUrl='http://api.tweetmeme.com/stories/popular.json?category=';
     $.ajax({
@@ -60,6 +64,7 @@ var getStories = function(){
         }
     });
 };
+
 function createTableHeader()
 {
     var html='<tr>';
